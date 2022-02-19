@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import "jinblog.css";
+
+div#container div#content img{
+	margin: 10px;
+	width:22%;
+	height:150px;
+}
+
+div#container div#content div#user-join{
+	margin:auto;
+	border:1px solid #e4605e;
+	width:50%;
+	height:50%;
+}
+
+div#container div#content form#join-form{
+	margin:auto;
+	
+}
+
+
+
