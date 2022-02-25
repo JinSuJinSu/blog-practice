@@ -66,5 +66,6 @@
 	
 	<modules>
 		<module>jinblog</module>
+		<module>jinblog02</module>
 	</modules>
 </project>

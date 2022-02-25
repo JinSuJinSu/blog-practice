@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+
+	<!-- 게시판 전체 조회 -->
+	<select id="findAll" resultType="boardvo">
+	<![CDATA[
+			select no, userId, title, hit, regDate from board
+			order by groupNo desc, orderNo asc;
+	]]>
+	</select>
+	
+	<!-- 글 쓰기 -->
+	<insert id="insert" parameterType="boardvo">
+	<![CDATA[
+			insert into board values(null, #{title}, #{content}, 0,  
+			(select * from(select max(ifnull(groupNo,0))+1 from board) as temp), 1, 1, now(), #{userId})
+	]]>
+	</insert>
+
+
+	
+</mapper>
+

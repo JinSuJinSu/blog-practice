@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import "jinblog.css";
+
+
+div#container div#content img{
+	margin: 10px;
+	width:22%;
+	height:150px;
+}
+
+/*게시판 페이지 화면 구축*/
+div#container div#content div#board{
+	margin:50px auto;
+/* 	border:1px solid #e4605e; */
+	width:90%;
+	height:80%;
+	text-align: center;
+}
+
+/*게시판 메인 페이지 검색 부분*/
+div#container div#content div#board form#search-form{
+	margin:50px auto;
+	width:80%;
+	height:8%;
+	text-align: center;
+}
+
+div#container div#content div#board form#search-form input{
+	font-size:1em;
+}
+
+div#container div#content div#board select{
+	font-size:1em;
+}
+
+
+/*게시판 메인 페이지 테이블*/
+div#container div#content div#board table.table{
+	margin:40px auto;
+	width:100%;
+	border-collapse:collapse;
+	border-bottom:4px solid #333;
+}
+
+div#container div#content div#board table.table th, 
+div#container div#content div#board table.table td	{ 
+	padding:8px;
+	text-align:center; 	 
+}
+
+div#container div#content div#board table.table th	{ 
+	border-top:4px solid #333;
+	border-bottom:4px solid #333; 
+	background-color:#008d62; 
+	font-size:1.3em; 
+	color:#fff;
+}
+
+div#container div#content div#board table.table td {
+	border-top:1px solid #333;
+	border-bottom:1px solid #333; 
+}
+
+/*게시판 메인 페이지 글쓰기 부분*/
+div#container div#content div#board .bottom {
+	margin:20px auto;
+	padding:5px;
+	width:10%;
+}
+
+div#container div#content div#board .bottom button {
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+div#container div#content div#board .bottom button:hover {
+	color: #e4605e;
+}
+
+/*게시판 글쓰기 페이지*/
+div#container div#content div#board form#write-form{
+	margin:50px auto;
+/* 	border:1px solid #e4605e; */
+	width:90%;
+	height:90%;
+}
+
+div#container div#content div#board form#write-form #write-title,
+div#container div#content div#board form#write-form #write-content{
+	margin-top:15px;
+	font-size:1.3em;
+	font-weight:bold;
+	width:95%
+}
+
+	
+
+div#container div#content div#board form#write-form #write-content{
+	font-size:1.6em;
+	height:80%;
+}
+
+div#container div#content div#board form#write-form .bottom{
+	float:right;
+	width:35%;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10px;
+}
+
+div#container div#content div#board form#write-form .bottom a{
+	text-decoration:none;
+	font-size:1.5em;
+	color:black;
+	font-weight:bold;
+	display:block;
+	background-color:#c0c0c0;
+	border: 1px solid;
+}
+
+div#container div#content div#board form#write-form input[type="submit"] {
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+div#container div#content div#board form#write-form .bottom a:hover,
+div#container div#content div#board form#write-form input[type="submit"]:hover {
+	color: #e4605e;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
