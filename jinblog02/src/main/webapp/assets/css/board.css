@@ -57,8 +57,19 @@ div#container div#content div#board table.table th	{
 }
 
 div#container div#content div#board table.table td {
+	font-size:1em;
 	border-top:1px solid #333;
 	border-bottom:1px solid #333; 
+}
+
+div#container div#content div#board table.table td a{
+	text-decoration:none;
+	color:blue;
+}
+
+div#container div#content div#board table.table td a:hover{
+	color: #e4605e;
+	font-weight:bold;
 }
 
 /*게시판 메인 페이지 글쓰기 부분*/
@@ -78,15 +89,15 @@ div#container div#content div#board .bottom button:hover {
 }
 
 /*게시판 글쓰기 페이지*/
-div#container div#content div#board form#write-form{
+div#container div#content div#board form#board-form{
 	margin:50px auto;
 /* 	border:1px solid #e4605e; */
 	width:90%;
 	height:90%;
 }
 
-div#container div#content div#board form#write-form #write-title,
-div#container div#content div#board form#write-form #write-content{
+div#container div#content div#board form#board-form #board-title,
+div#container div#content div#board form#board-form #board-content{
 	margin-top:15px;
 	font-size:1.3em;
 	font-weight:bold;
@@ -95,20 +106,21 @@ div#container div#content div#board form#write-form #write-content{
 
 	
 
-div#container div#content div#board form#write-form #write-content{
+div#container div#content div#board form#board-form #board-content{
 	font-size:1.6em;
 	height:80%;
 }
 
-div#container div#content div#board form#write-form .bottom{
+div#container div#content div#board form#board-form .bottom{
 	float:right;
 	width:35%;
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 10px;
+	row-gap:10px;
 }
 
-div#container div#content div#board form#write-form .bottom a{
+div#container div#content div#board form#board-form .bottom a{
 	text-decoration:none;
 	font-size:1.5em;
 	color:black;
@@ -118,13 +130,13 @@ div#container div#content div#board form#write-form .bottom a{
 	border: 1px solid;
 }
 
-div#container div#content div#board form#write-form input[type="submit"] {
+div#container div#content div#board form#board-form input[type="submit"] {
 	font-size:1.5em;
 	font-weight:bold;
 }
 
-div#container div#content div#board form#write-form .bottom a:hover,
-div#container div#content div#board form#write-form input[type="submit"]:hover {
+div#container div#content div#board form#board-form .bottom a:hover,
+div#container div#content div#board form#board-form input[type="submit"]:hover {
 	color: #e4605e;	
 }
 

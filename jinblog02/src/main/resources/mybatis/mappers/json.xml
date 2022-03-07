@@ -8,7 +8,16 @@
 	<![CDATA[
 			select no, userId, title, content, hit from board 
 			where userId=#{userId}
-			order by groupNo desc, orderNo asc limit 1;
+			order by groupNo desc, orderNo asc limit 1
+	]]>
+	</select>
+	
+	<!-- 전체의 json 데이터 받아오기 -->
+	<select id="findAllJson" parameterType="String" resultType="boardvo">
+	<![CDATA[
+			select no, userId, title, content, hit from board 
+			where userId=#{userId}
+			order by groupNo desc, orderNo asc
 	]]>
 	</select>
 

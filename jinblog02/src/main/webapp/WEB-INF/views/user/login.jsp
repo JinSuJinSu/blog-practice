@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <Link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user.css">
-<script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/jquery/jquery-3.6.0.js"></script>
 </head>
 <body>
 
@@ -32,7 +32,5 @@
 	<c:import url="/WEB-INF/views/includes/footer.jsp"/>
 	
 </div>
-<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jinblog.js"></script> --%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/jquery/jquery-jinblog.js"></script>
 </body>
 </html>

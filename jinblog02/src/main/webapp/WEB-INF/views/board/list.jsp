@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <Link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/board.css">
-<script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/jquery/jquery-3.6.0.js"></script>
 </head>
 <body>
 
@@ -42,11 +42,34 @@
 					<tr>
 						<td>${list.size()-status.index}</td>
 						<td>${vo.userId}</td>
-						<td>${vo.title}</td>				
+						<td><a href="${pageContext.servletContext.contextPath}/board/view/${vo.no}">${vo.title}</a></td>				
 						<td>${vo.hit}</td>
 						<td>${vo.regDate}</td>
 					</c:forEach>
 				</table>
+				
+				<div class="pager">
+					<ul>
+						<c:if test = "${map.startPage!=1}">
+						<li><a href="${pageContext.servletContext.contextPath}/board?page=${map.startPage-5}&kwd=${map.kwd}&value=${map.value}&arrow=arrow">◀</a></li>
+						</c:if>
+						<c:forEach  begin="${map.startPage}" end="${map.endPage}"  step="1" var="page">
+							<c:choose>
+								<c:when test="${map.currentPage==page}">
+									<li class="selected">
+									<a href="${pageContext.servletContext.contextPath}/board?page=${page}&kwd=${map.kwd}&value=${map.value}">${page}</a></li>
+								</c:when>
+								<c:otherwise>
+								<li>
+								<a href="${pageContext.servletContext.contextPath}/board?&page=${page}&kwd=${map.kwd}&value=${map.value}">${page}</a></li>
+								</c:otherwise>	
+							</c:choose>		
+						</c:forEach>
+						<c:if test = "${map.endPage!=Math.ceil(map.size/5)}">
+						<li><a href="${pageContext.servletContext.contextPath}/board?page=${map.startPage+5}&kwd=${map.kwd}&value=${map.value}&arrow=arrow">▶</a></li>
+						</c:if>
+					</ul>
+				</div>					
 			
 				<!-- 글쓰기 버튼 추가-->			
 				<div class="bottom">
@@ -58,7 +81,5 @@
 	<c:import url="/WEB-INF/views/includes/footer.jsp"/>
 	
 </div>
-<%-- <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jinblog.js"></script> --%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/jquery/jquery-jinblog.js"></script>
 </body>
 </html>

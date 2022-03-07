@@ -27,14 +27,13 @@ public class UserController {
 	// 회원가입 
 	@RequestMapping(value="/join", method=RequestMethod.POST)
 	public String join(UserVo userVo) {
-		if(userService.checkUser(userVo.getId())!=null){
-			return "user/join"; // 기존 아이디가 존재할 경우
-		}
-		
-		if(userVo.getId().equals("") || userVo.getName().equals("") || userVo.getPassword().equals("") || userVo.getEmail().equals("")) {
-			return "user/join"; // 회원가입 입력을 똑바로 하지 않았을 시
-		}
-
+//		if(userService.checkUser(userVo.getId())!=null){
+//			return "user/join"; // 기존 아이디가 존재할 경우
+//		}
+//		
+//		if(userVo.getId().equals("") || userVo.getName().equals("") || userVo.getPassword().equals("") || userVo.getEmail().equals("")) {
+//			return "user/join"; // 회원가입 입력을 똑바로 하지 않았을 시
+//		}
 		userService.join(userVo);
 		return "redirect:/user/joinsuccess";
 	}

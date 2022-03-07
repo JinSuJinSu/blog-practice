@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <Link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/board.css">
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/jquery/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/jquery/jquery-3.6.0.js"></script>>
 </head>
 <body>
 
@@ -19,12 +19,12 @@
 
 	<div id="content">
 		<div id="board">
-				<form id="board-form" action="${pageContext.servletContext.contextPath}/board/write" method="post">
-					<input id="board-title" placeholder="제목을 작성하세요" name="title" type="text" required><br>
-					<textarea id="board-content" placeholder="내용을 작성하세요" name="content" required></textarea><br>
+				<form id="board-form" action="${pageContext.servletContext.contextPath}/board/update/${updateVo.no}" method="post">
+					<input id="board-title" name="title" type="text" value="${updateVo.title}"><br>
+					<textarea id="board-content" name="content">${updateVo.content}</textarea><br>
 					
 						<div class="bottom">
-							<a href="${pageContext.servletContext.contextPath}/board">글쓰기 취소</a>
+							<a href="${pageContext.servletContext.contextPath}/board/view/${updateVo.no}">글수정 취소</a>
 							<input type="submit" value="작성완료">	
 						</div>
 						

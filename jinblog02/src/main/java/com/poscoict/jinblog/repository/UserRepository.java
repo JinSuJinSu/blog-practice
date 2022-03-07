@@ -42,9 +42,9 @@ public class UserRepository {
 	}
 	
 	// 회원가입 유저 중복 체크
-	public String checkUser(String id){
-		String userId = sqlSession.selectOne("user.checkUser",id);
-		return userId;
+	public UserVo checkUser(String id){
+		UserVo result = sqlSession.selectOne("user.checkUser",id);
+		return result;
 	}
 	
 	// 유저 로그인

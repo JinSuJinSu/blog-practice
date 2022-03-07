@@ -20,14 +20,17 @@
 	<div id="content">
 		<div id="board">
 				<form id="board-form" action="${pageContext.servletContext.contextPath}/board/write" method="post">
-					<input id="board-title" placeholder="제목을 작성하세요" name="title" type="text" required><br>
-					<textarea id="board-content" placeholder="내용을 작성하세요" name="content" required></textarea><br>
+					<input id="board-title" name="title" type="text" value = "${readVo.title}" readonly><br>
+					<textarea id="board-content" name="content" readonly>${readVo.content}</textarea><br>
 					
 						<div class="bottom">
-							<a href="${pageContext.servletContext.contextPath}/board">글쓰기 취소</a>
-							<input type="submit" value="작성완료">	
+							<a href="${pageContext.servletContext.contextPath}/board">게시판목록</a>
+							<a href="${pageContext.servletContext.contextPath}/board">답글달기</a>
+							<c:if test = "${authUser.id == readVo.userId}">
+								<a href="${pageContext.servletContext.contextPath}/board/update/${readVo.no}">수정하기</a>
+								<a href="${pageContext.servletContext.contextPath}/board/delete/${readVo.no}">삭제하기</a>
+							</c:if>
 						</div>
-						
 				</form>
 			</div>
 		</div>

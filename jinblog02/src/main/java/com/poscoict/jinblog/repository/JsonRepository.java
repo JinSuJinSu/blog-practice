@@ -19,5 +19,11 @@ public class JsonRepository {
 		BoardVo boardVo = sqlSession.selectOne("json.findJson",userId);
 		return boardVo;
 	}
+	
+	// json용 객체 리스트 선택
+	public List<BoardVo> findAllJson(String userId) {
+		List<BoardVo> list = sqlSession.selectList("json.findAllJson",userId);
+		return list;
+	}
 
 }

@@ -22,9 +22,9 @@ public class UserService {
 	}
 	
 	// 회원가입 중복체크
-	public String checkUser(String id) {
-		String userId = userRepository.checkUser(id);
-		return userId;
+	public UserVo checkUser(String id) {
+		UserVo result = userRepository.checkUser(id);
+		return result;
 	}
 	
 	// 로그인 시 아이디, 비번 확인
